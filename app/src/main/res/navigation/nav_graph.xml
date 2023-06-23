@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.section27.navigationapptest.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/mainToSecond"
+            app:destination="@id/seconedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seconedFragment"
+        android:name="com.section27.navigationapptest.SeconedFragment"
+        android:label="fragment_seconed"
+        tools:layout="@layout/fragment_seconed" >
+        <argument
+            android:name="userEmail"
+            app:argType="string"
+            android:defaultValue="No Email to Display " />
+        <argument
+            android:name="userPassword"
+            app:argType="string"
+            android:defaultValue="no password to display " />
+    </fragment>
+</navigation>
